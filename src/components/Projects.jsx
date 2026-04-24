@@ -2,6 +2,7 @@ import React from 'react';
 import { TbExternalLink } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
 import { motion } from 'framer-motion';
+import dashboardImg from "../assets/Dashboard.png"; 
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     title: "Faculty Management System",
     description:
       "A full-stack MERN application to manage faculty records, payroll, and leave management. Built with a modern React (Vite) frontend and a scalable Node.js & Express backend with MongoDB Atlas.",
-    image: "public/assets/Dashboard.png",
+    image: dashboardImg, 
     github: "https://github.com/Yug-Patel-1228",
     live: ""
   }

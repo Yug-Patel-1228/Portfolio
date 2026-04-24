@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaJava, FaAngular, FaPython } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import university from "../assets/univercity.png"; 
+import upgrowth from "../assets/upgrowth.png"; 
 
 export default function Skills() {
   const skills = [
@@ -11,8 +13,8 @@ export default function Skills() {
     { id: 4, name: "MongoDB", icon: <FaDatabase size={50} /> },
     { id: 5, name: "SQL", icon: <FaDatabase size={50} /> },
     { id: 6, name: "Tailwind CSS", icon: <RiTailwindCssFill size={50} /> },
-     { id: 7, name: "Angular.js", icon: <FaAngular size={50} /> },
-      { id: 8, name: "Python", icon: <FaPython size={50} /> },
+    { id: 7, name: "Angular.js", icon: <FaAngular size={50} /> },
+    { id: 8, name: "Python", icon: <FaPython size={50} /> },
   ];
 
   return (
@@ -64,37 +66,37 @@ export default function Skills() {
 
           {/* EDUCATION */}
           <div className="border border-gray-600 rounded p-5 text-white">
-          <div className="flex items-center gap-4">
-            <img
-              src="public/assets/univercity.png" 
-              alt="University"
-              className="w-10 h-10 object-contain bg-white p-1 rounded"
-            />
-            <h2 className="text-lg font-semibold">
-              Bachelor of Computer Applications (BCA)
-            </h2>
-          </div>
+            <div className="flex items-center gap-4">
+              <img
+                src={university} 
+                alt="University"
+                className="w-10 h-10 object-contain bg-white p-1 rounded"
+              />
+              <h2 className="text-lg font-semibold">
+                Bachelor of Computer Applications (BCA)
+              </h2>
+            </div>
 
             <p className="text-sm text-gray-400 mt-2">
               June 2023 - April 2026
             </p>
-          <p className="text-sm text-gray-400 mt-2">
-            Vidyabharti Trust College of Business, Computer-Science & Research (VTCBCSR)
-          </p>
-          <p className="text-sm text-gray-500">
-            Veer Narmad South Gujarat University (VNSGU) • Completed
-          </p>
+            <p className="text-sm text-gray-400 mt-2">
+              Vidyabharti Trust College of Business, Computer-Science & Research (VTCBCSR)
+            </p>
+            <p className="text-sm text-gray-500">
+              Veer Narmad South Gujarat University (VNSGU) • Completed
+            </p>
 
-          <p className="mt-3 text-sm text-gray-300">
-            Studied core computer science subjects including web development, databases, and programming. Built multiple full-stack projects using MERN stack.
-          </p>
-        </div>
+            <p className="mt-3 text-sm text-gray-300">
+              Studied core computer science subjects including web development, databases, and programming. Built multiple full-stack projects using MERN stack.
+            </p>
+          </div>
 
           {/* INTERNSHIP */}
           <div className="border border-gray-600 rounded p-5 text-white">
             <div className="flex items-center gap-4">
               <img
-                src="public/assets/upgrowth.png"
+                src={upgrowth} 
                 alt="UpGrowth Infotech"
                 className="w-10 h-10 object-contain bg-white p-1 rounded"
               />

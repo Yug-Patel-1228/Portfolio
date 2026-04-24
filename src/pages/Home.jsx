@@ -4,6 +4,7 @@ import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
+import hero from "../assets/hero-vector.svg";  
 
 export default function Home() {
   return (
@@ -39,8 +40,6 @@ export default function Home() {
                 sequence={[
                   "I am Yug Patel",
                   1500,
-                  // "I build Web Apps",
-                  // 1500,
                 ]}
                 speed={30}
                 repeat={Infinity}
@@ -138,7 +137,7 @@ export default function Home() {
         >
           <img
             className="h-full w-full"
-            src="public/assets/hero-vector.svg"
+            src={hero} 
             alt="Hero"
           />
         </motion.div>

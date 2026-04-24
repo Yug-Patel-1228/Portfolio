@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TbDownload } from "react-icons/tb";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import logo from "../assets/logo.png"; 
 
 export default function Navbar() {
   const [hasShadow, setHasShadow] = useState(false);
@@ -32,8 +33,9 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${hasShadow ? "shadow-md" : "shadow-none"
-        }`}
+      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${
+        hasShadow ? "shadow-md" : "shadow-none"
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <motion.img
@@ -41,12 +43,12 @@ export default function Navbar() {
           whileTap={{ scale: 0.9 }}
           onClick={() => scrollToSection("home")}
           className="h-9 cursor-pointer"
-          src="public/assets/logo.png"
+          src={logo} 
           alt="Logo"
         />
 
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-          {[ "skills","about", "projects", "contact"].map((section) => (
+          {["skills", "about", "projects", "contact"].map((section) => (
             <motion.li
               key={section}
               className="group"
@@ -67,11 +69,7 @@ export default function Navbar() {
           href=""
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
         >
-          {/* <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-          <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-            Resume <TbDownload size={16} />
-          </span> */}
+          {/* unchanged */}
         </motion.a>
 
         <motion.button
