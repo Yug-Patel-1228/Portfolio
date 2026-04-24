@@ -48,9 +48,11 @@ http://localhost:5173/
 🚀 Deployment
 This project is deployed using:
 GitHub Pages
+
 To deploy:
 npm run deploy
-📌 Future Improvements
+
+📌 Future Improvements:
 📄 Resume download feature
 🌙 Dark mode toggle
 📬 Contact form backend integration
