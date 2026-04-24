@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 import { IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
@@ -7,7 +8,32 @@ import { IoMdMail } from "react-icons/io";
 
 export default function Contact() {
   const ref = useRef(null);
+  const form = useRef();
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.sendForm(
+      "service_53473by",
+      "template_wbujxrq",
+      form.current,
+      "IuspcG_zI2iTOFxhY" 
+    )
+    .then(() => {
+      setStatus("Message sent successfully ✅");
+      setLoading(false);
+      form.current.reset();
+    })
+    .catch(() => {
+      setStatus("Failed to send message ❌");
+      setLoading(false);
+    });
+  };
 
   return (
     <motion.div
@@ -36,22 +62,47 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className='lg:w-[40%] w-full'
         >
-          <form className='w-full space-y-4'>
-            <input className='border-2 px-5 py-3 border-black rounded text-sm w-full' type="text" placeholder='Your name' required />
-            <input className='border-2 px-5 py-3 border-black rounded text-sm w-full' type="email" placeholder='Email' required />
-            <textarea className='resize-none border-2 px-5 py-3 h-32 border-black rounded text-sm w-full' placeholder='Your message'></textarea>
+          <form ref={form} onSubmit={sendEmail} className='w-full space-y-4'>
+
+            <input
+              name="from_name"
+              className='border-2 px-5 py-3 border-black rounded text-sm w-full'
+              type="text"
+              placeholder='Your name'
+              required
+            />
+
+            <input
+              name="from_email"
+              className='border-2 px-5 py-3 border-black rounded text-sm w-full'
+              type="email"
+              placeholder='Email'
+              required
+            />
+
+            <textarea
+              name="message"
+              className='resize-none border-2 px-5 py-3 h-32 border-black rounded text-sm w-full'
+              placeholder='Your message'
+              required
+            />
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               type='submit'
+              disabled={loading}
               className='bg-black text-white px-4 py-2 rounded w-full font-medium hover:shadow-lg'
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </motion.button>
+
+            {/* STATUS MESSAGE */}
+            {status && (
+              <p className="text-sm text-center mt-2">{status}</p>
+            )}
 
             {/* SOCIAL ICONS */}
             <div className='flex items-center gap-4 mt-4'>
-              
               <a href="mailto:yugcpatel2812@gmail.com" target="_blank" rel="noopener noreferrer"
                 className="bg-white p-2 rounded border-2 border-black hover:bg-black hover:text-white transition">
                 <BiLogoGmail />
@@ -71,8 +122,8 @@ export default function Contact() {
                 className="bg-white p-2 rounded border-2 border-black hover:bg-black hover:text-white transition">
                 <BsGithub />
               </a>
-
             </div>
+
           </form>
         </motion.div>
 
@@ -92,7 +143,6 @@ export default function Contact() {
             I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out!
           </p>
 
-          {/* EMAIL ONLY */}
           <div className='font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-3'>
             <a
               className='flex items-center gap-2 group'
