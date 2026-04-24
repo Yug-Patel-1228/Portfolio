@@ -39,33 +39,48 @@ npm install
 npm run dev
 
 👉 App runs at:
+
 http://localhost:5173/
 
-🌍 Live Demo
+🌍 Live Demo:
+
 👉 Check out my live portfolio:
+
 🔗 https://yug-patel-1228.github.io/Portfolio/
 
-🚀 Deployment
+🚀 Deployment:
+
 This project is deployed using:
+
 GitHub Pages
 
 To deploy:
+
 npm run deploy
 
 📌 Future Improvements:
+
 📄 Resume download feature
+
 🌙 Dark mode toggle
+
 📬 Contact form backend integration
+
 📊 Analytics integration
+
 🤝 Contributing
 
 This is a personal project, but suggestions are always welcome!
 Feel free to fork and improve.
 
 📬 Contact Me:
+
 📧 Email: yugcpatel2812@gmail.com
+
 💼 LinkedIn: https://www.linkedin.com/in/yug-patel-1062813bb
+
 🐙 GitHub: https://github.com/Yug-Patel-1228
+
 ⭐ Support
 
 If you like this project, consider giving it a ⭐ on GitHub!
