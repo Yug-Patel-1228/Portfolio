@@ -9,7 +9,7 @@ const projects = [
     title: "Faculty Management System",
     description:
       "A full-stack MERN application to manage faculty records, payroll, and leave management. Built with a modern React (Vite) frontend and a scalable Node.js & Express backend with MongoDB Atlas.",
-    image: "/assets/Dashboard.png",
+    image: "public/assets/Dashboard.png",
     github: "https://github.com/Yug-Patel-1228",
     live: ""
   }

@@ -138,7 +138,7 @@ export default function Home() {
         >
           <img
             className="h-full w-full"
-            src="/assets/hero-vector.svg"
+            src="public/assets/hero-vector.svg"
             alt="Hero"
           />
         </motion.div>

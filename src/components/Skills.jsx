@@ -66,7 +66,7 @@ export default function Skills() {
           <div className="border border-gray-600 rounded p-5 text-white">
           <div className="flex items-center gap-4">
             <img
-              src="/assets/univercity.png"
+              src="public/assets/univercity.png" 
               alt="University"
               className="w-10 h-10 object-contain bg-white p-1 rounded"
             />
@@ -94,7 +94,7 @@ export default function Skills() {
           <div className="border border-gray-600 rounded p-5 text-white">
             <div className="flex items-center gap-4">
               <img
-                src="/assets/upgrowth.png"
+                src="public/assets/upgrowth.png"
                 alt="UpGrowth Infotech"
                 className="w-10 h-10 object-contain bg-white p-1 rounded"
               />
