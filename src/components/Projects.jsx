@@ -2,16 +2,27 @@ import React from 'react';
 import { TbExternalLink } from "react-icons/tb";
 import { BsGithub } from "react-icons/bs";
 import { motion } from 'framer-motion';
-import dashboardImg from "../assets/Dashboard.png"; 
+
+import dashboardImg from "../assets/Dashboard.png";
+import finviewImg from "../assets/finview.png"; 
 
 const projects = [
   {
     id: 1,
+    title: "FinView — Personal Finance Visualizer",
+    description:
+      "A modern personal finance tracking app built with React, Tailwind CSS, and Recharts. Features transaction management, analytics dashboard, drag-and-drop support, and real-time financial insights.",
+    image: finviewImg,
+    github: "https://github.com/Yug-Patel-1228/FinView",
+    live: "https://yug-patel-1228.github.io/FinView"
+  },
+  {
+    id: 2,
     title: "Faculty Management System",
     description:
-      "A full-stack MERN application to manage faculty records, payroll, and leave management. Built with a modern React (Vite) frontend and a scalable Node.js & Express backend with MongoDB Atlas.",
-    image: dashboardImg, 
-    github: "https://github.com/Yug-Patel-1228",
+      "A full-stack MERN application to manage faculty records, payroll, and leave management with a scalable backend using Node.js, Express, and MongoDB.",
+    image: dashboardImg,
+    github: "https://github.com/Yug-Patel-1228/faculty-management-system",
     live: ""
   }
 ];
@@ -68,7 +79,7 @@ export default function Projects() {
 
                 {/* GitHub */}
                 <a
-                  href="https://github.com/Yug-Patel-1228/faculty-management-system"
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white flex items-center gap-2"
@@ -77,7 +88,7 @@ export default function Projects() {
                   <span className="text-sm">Code</span>
                 </a>
 
-                {/* Live  */}
+                {/* Live */}
                 {project.live && (
                   <a
                     href={project.live}
